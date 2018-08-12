@@ -161,6 +161,17 @@ namespace ToothlessUtils.Types
         {
             eulerAngles = xyz;
         }
+        /// <summary>
+        /// Set Quaternion values<para />
+        /// XYZ must be in degs
+        /// </summary>
+        /// <param name="xyz">XYZ Angles</param>
+        public static THQuaternion CreateAndSetFromVec(THVector3 xyz)
+        {
+            var q = new THQuaternion();
+            q.Set(xyz);
+            return q;
+        }
 
         /// <summary>
         /// Normalize Quaternion

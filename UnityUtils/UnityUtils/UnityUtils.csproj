@@ -60,6 +60,9 @@
     <Compile Include="Input\BoundKeys.cs" />
     <Compile Include="Input\RebindKey.cs" />
     <Compile Include="Input\THInput.cs" />
+    <Compile Include="Misc\HideLockCursor.cs" />
+    <Compile Include="Player\PlayerLook.cs" />
+    <Compile Include="Player\PlayerMovement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Input\NewKeyInput.cs" />
     <Compile Include="Types\Quaternion.cs" />

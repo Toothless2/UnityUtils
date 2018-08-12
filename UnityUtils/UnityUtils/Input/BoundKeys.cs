@@ -8,7 +8,16 @@ namespace ToothlessUtils.Input
         /// <summary>
         /// Keybindings
         /// </summary>
-        public static Dictionary<string, KeyCode> binds { get; private set; } = new Dictionary<string, KeyCode>();
+        public static Dictionary<string, KeyCode> binds { get; private set; } = new Dictionary<string, KeyCode>()
+        {
+            {"Forward", KeyCode.W },
+            {"Backwards", KeyCode.S },
+            {"Right", KeyCode.D },
+            {"Left", KeyCode.A },
+            {"Jump", KeyCode.Space },
+            {"LeftMouse", KeyCode.Mouse0 },
+            {"RightMouse", KeyCode.Mouse1 }
+        };
         
         /// <summary>
         /// Adds a binding to the <see cref="binds"/> Dictionary
@@ -32,6 +41,18 @@ namespace ToothlessUtils.Input
             binds.Add(bindName, key);
 
             return true;
+        }
+        /// <summary>
+        /// Adds a binding to the <see cref="binds"/> Dictionary
+        /// </summary>
+        /// <param name="bindName">Name of new Binding.</param>
+        /// <param name="additionInfo">Extra Information about an Addition</param>
+        /// <returns>true if key is added</returns>
+        public static bool AddBind(string bindName, KeyCode key = KeyCode.None)
+        {
+            string b;
+
+            return AddBind(bindName, out b, key);
         }
 
         /// <summary>

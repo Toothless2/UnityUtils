@@ -286,5 +286,18 @@ namespace ToothlessUtils.Input
 
             return input;
         }
+
+        /// <summary>
+        /// Checks for input on most keys
+        /// </summary>
+        /// <param name="key">The Key pressed</param>
+        /// <returns>True if a key is pressed</returns>
+        public static bool CheckForInput(out KeyCode key)
+        {
+            key = CheckForInput();
+
+            if (key == KeyCode.None) return false;
+            return true;
+        }
     }
 }

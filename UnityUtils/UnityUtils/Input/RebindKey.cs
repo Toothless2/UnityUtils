@@ -7,6 +7,7 @@ namespace ToothlessUtils.Input
         /// <summary>
         /// How long will the function wait for the players input?
         /// </summary>
+        [System.Obsolete("Unused")]
         public static int rebindTimeout = 2000;
 
         /// <summary>
@@ -15,6 +16,7 @@ namespace ToothlessUtils.Input
         /// </summary>
         /// <param name="bind">Binding to change</param>
         /// <returns>true if binding was chnaged sucessfuly</returns>
+        [System.Obsolete("Do not use needs reworking. Instead use NewKeyInput.CheckForInput()")]
         public static bool SetRebindKey(string bind)
         {
             KeyCode key = KeyCode.None;
